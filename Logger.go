@@ -85,7 +85,6 @@ func (h *CharmHandler) WithAttrs(attrs []slog.Attr) slog.Handler {
 	return &CharmHandler{logger: newLogger, minLevel: h.minLevel, group: h.group}
 }
 
-// WithGroup возвращает новый Handler с префиксом для ключей.
 func (h *CharmHandler) WithGroup(name string) slog.Handler {
 	group := name
 	if h.group != "" {

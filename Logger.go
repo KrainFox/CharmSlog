@@ -22,6 +22,8 @@ func NewCharmHandler(minLevel slog.Level, prefix string) *CharmHandler {
 		Prefix:       prefix,
 	})
 
+	l.SetLevel(clog.DebugLevel)
+
 	return &CharmHandler{
 		logger:   l,
 		minLevel: minLevel,
